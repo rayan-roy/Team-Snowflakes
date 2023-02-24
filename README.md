@@ -15,7 +15,7 @@ Our goal is to build a classification model to predict the drug binding sites on
 
 #### Data preprocessing
 
-We did some preliminary data analysis to determine features that are not statistically significant towards predicting the response. After dropping those features, we also converted categorical features to numerical ones (True/False to 1/0). Lastly, for 'feat_SCSASA', we set all negative values to 0. The following features were dropped: 'annotation_sequence', 'feat_C', 'feat_D', 'feat_I', 'feat_K', 'feat_T', 'feat_V', 'annotation_atomrec', 'feat_DSSP_12', 'feat_THETA', 'entry', 'entry_index'.
+We did some preliminary data analysis to determine features that are not statistically significant towards predicting the response. After dropping those features, we also converted boolean values to numerical ones (True/False to 1/0). Lastly, for 'feat_SCSASA', we set all negative values to 0. This is because they rpresent solvent accessible surface area and surface areas are all positives or 0. We also found out that annotation_sequence and annotation_atomrec were identical. The following features were dropped: 'annotation_sequence', 'feat_C', 'feat_D', 'feat_I', 'feat_K', 'feat_T', 'feat_V', 'annotation_atomrec', 'feat_DSSP_12', 'feat_THETA', 'entry', 'entry_index'.
 
 #### Our model
 
